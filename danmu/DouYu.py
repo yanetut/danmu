@@ -50,7 +50,7 @@ class DouYuDanMuClient(AbstractDanMuClient):
                     msg = json.loads((b'{"' + msg[:-2] + b'}').decode('utf8', 'ignore'))
                     msg['NickName'] = msg.get('nn', '')
                     msg['Content']  = msg.get('txt', '')
-                    msg['Color'] = msg.get('col','')
+                    msg['Color'] = msg.get('col','1')
                     msg['MsgType']  = {'dgb': 'gift', 'chatmsg': 'danmu',
                         'uenter': 'enter'}.get(msg['type'], 'other')
                 except Exception as e:
