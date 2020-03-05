@@ -29,7 +29,7 @@ class DouYuDanMuClient(AbstractDanMuClient):
         self.roomId = j['data']['room_id']
         return True
     def _prepare_env(self):
-        return ('openbarrage.douyutv.com', 8601), {'room_id': self.roomId}
+        return ('danmuproxy.douyu.com', 8601), {'room_id': self.roomId}
     def _init_socket(self, danmu, roomInfo):
         self.danmuSocket = _socket()
         self.danmuSocket.connect(danmu)
